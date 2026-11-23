@@ -18,7 +18,6 @@ PITCH = "You don't need to learn to code — just describe the app idea you've b
 def main() -> None:
     output_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
     output_dir.mkdir(parents=True, exist_ok=True)
-    os.chmod(output_dir, 0o755)
     entry_path = output_dir / "entry.txt"
     entry_path.write_text(PITCH, encoding="utf-8")
     os.chmod(entry_path, 0o644)
